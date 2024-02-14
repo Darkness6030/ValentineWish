@@ -1,14 +1,8 @@
 const animationTimeline = () => {
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
-  const hbd = document.getElementsByClassName("wish-hbd")[0];
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
     .split("")
-    .join("</span><span>")}</span`;
-
-  hbd.innerHTML = `<span>${hbd.innerHTML
-    .split("")
-    .map(char => char === ' ' ? '&nbsp;' : char)
     .join("</span><span>")}</span`;
 
   const ideaTextTrans = {
@@ -169,7 +163,7 @@ const animationTimeline = () => {
     )
     .staggerFromTo(
       ".baloons img",
-      2.5,
+      2,
       {
         opacity: 0.9,
         y: 1400,
